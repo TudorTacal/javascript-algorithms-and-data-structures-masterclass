@@ -1,0 +1,22 @@
+{
+  "name": "javascript-algorithms-and-data-structures-masterclass",
+  "version": "1.0.0",
+  "description": "JavaScript Algorithms and Data Structures Masterclass",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TudorTacal/javascript-algorithms-and-data-structures-masterclass.git"
+  },
+  "author": "Tudor Tacal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TudorTacal/javascript-algorithms-and-data-structures-masterclass/issues"
+  },
+  "homepage": "https://github.com/TudorTacal/javascript-algorithms-and-data-structures-masterclass#readme",
+  "dependencies": {
+    "jest": "^24.8.0"
+  }
+}
