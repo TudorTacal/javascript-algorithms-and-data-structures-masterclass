@@ -7,14 +7,14 @@ function anagram(str1, str2) {
   let o1 = {};
   let o2 = {};
 
-  for (i of str1) {
+  for (let i of str1) {
     o1[i] ? o1[i]++ : o1[i] = 1;
   }
-  for (i of str2) {
+  for (let i of str2) {
     o2[i] ? o2[i]++ : o2[i] = 1;
   }
 
-  for (key of Object.keys(o1)) {
+  for (let key of Object.keys(o1)) {
     if (!o2.hasOwnProperty(key)) return false;
     if (o1[key] !== o2[key]) return false;
   }
