@@ -15,9 +15,9 @@ function anagram(str1, str2) {
   }
 
   for (let key of Object.keys(o1)) {
-    if (!o2.hasOwnProperty(key)) return false;
-    if (o1[key] !== o2[key]) return false;
+    if (!o2.hasOwnProperty(key) || o1[key] !== o2[key]) return false;
   }
+
   return true;
 };
 
