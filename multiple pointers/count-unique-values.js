@@ -6,19 +6,14 @@ function countUniqueValues(values) {
   // if v[i] !== v[j] increase i, j and place v[j] at index i
   // return i + 1;
   if (values.length === 0) return 0;
-  let i = 0, j = 0;
-  while(true) {
-    if (values[i] === values[j]) {
-      j++;
-    } else if (j === values.length) {
-      return i + 1;
-    }
-    else {
+  let i = 0;
+  for (let j = 0; j < values.length; j++) {
+    if (values[i] !== values[j]) {
       i++;
-      values.splice(i, 1, values[j]);
-      j++;
+      values[i] = values[j];
     }
   }
+  return i + 1;
 };
 
 module.exports.default = countUniqueValues;
