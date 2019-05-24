@@ -3,16 +3,22 @@ function countUniqueValues(values) {
   // create a i pointer and j = i + 1 pointer
   // iterate once through the array
   // compare i with j
-  // if i !== j increase the counter
-  // return counter
+  // if v[i] !== v[j] increase i, j and place v[j] at index i
+  // return i + 1;
   if (values.length === 0) return 0;
-
-  let j, counter = 0;
-  for (let i = 0; i < values.length; i++) {
-    j = i + 1;
-    if (values[i] !== values[j]) counter++;
+  let i = 0, j = 0;
+  while(true) {
+    if (values[i] === values[j]) {
+      j++;
+    } else if (j === values.length) {
+      return i + 1;
+    }
+    else {
+      i++;
+      values.splice(i, 1, values[j]);
+      j++;
+    }
   }
-  return counter;
 };
 
 module.exports.default = countUniqueValues;
