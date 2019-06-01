@@ -1,5 +1,5 @@
 function averagePair(integers, average) {
-  // iterate thorugh the array
+  // iterate through the array
   // take 2 pointers, 1 at beginning, 1 at the end
   // if i + j / 2 > average decrease j
   // else increase i
@@ -14,7 +14,6 @@ function averagePair(integers, average) {
     }
   }
   return false;
-
 }
 
 module.exports.default = averagePair;
