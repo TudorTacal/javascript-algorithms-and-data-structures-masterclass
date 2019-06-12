@@ -1,25 +1,24 @@
 function minSubArrayLen(arr, num) {
-  let length;
-  let tempSum = 0;
-  let closestSum = Infinity;
-  let result1 = Infinity;
-  let result2 = Infinity;
+  // [2,3,1,2,4,3], 7) 2
+  let total = 0;
+  let start = 0;
+  let end = 0;
+  let minLen = Infinity;
 
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = i; j < arr.length; j++) {
-      length = j - i + 1;
-      tempSum += arr[j];
-      if (tempSum === num && length < result1) {
-        result1 = length
-      } else if (tempSum > num && tempSum < closestSum && length < result2) {
-        result2 = length;
-      }
+  while (start < arr.length) {
+    if (total < num) {
+      total += arr[end];
+      end++;
     }
-    closestSum = Math.min(tempSum, closestSum);
-    tempSum = 0;
+    else if (total >= num) {
+      minLen = Math.min(minLen, end-start);
+      total -= arr[start];
+      start++;
+    } else {
+      break;
+    }
   }
-  if (result1 === Infinity && result2 === Infinity) return 0;
-  return result1 <= result2 ? result1 : result2;
+  return minLen === Infinity ? 0 : minLen;
 }
 
 module.exports.default = minSubArrayLen;
