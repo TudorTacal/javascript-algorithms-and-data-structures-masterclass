@@ -14,13 +14,15 @@ function findLongestSubstring(str) {
     } else if (indexOf >= index) {
       substr += char;
       index++;
-    } else {
+      if (index === str.length) {
+        longestSubstring = Math.max(longestSubstring, substr.length);
+      }
+    } else if (indexOf < index) {
       longestSubstring = Math.max(longestSubstring, substr.length);
       substr = "";
       index = indexOf + 1;
       fromIndex = index;
     };
-    console.log(fromIndex, 'fromIndex', char, 'indexOf', indexOf, 'index', index, substr, longestSubstring);
   }
   return longestSubstring;
 }
