@@ -1,27 +1,20 @@
 function findLongestSubstring(str) {
-  let longestSubstring = 0;
-  let index = 0;
-  let fromIndex = 0;
-  let substr = '';
-  let indexOf;
-  let char;
+  let longestSubstr = 0;
+  let start = 0;
+  let seen = {};
 
-  while (index < str.length) {
-    char = str[index];
-    indexOf = str.indexOf(char, fromIndex);
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
 
-    if (indexOf >= index) {
-      substr += char;
-      index++;
-    } else {
-      substr = '';
-      index = indexOf + 1;
-      fromIndex = index;
-    };
-    longestSubstring = Math.max(longestSubstring, substr.length);
+    if (seen[char]) {
+      start = Math.max(start, seen[char]);
+    }
+
+    seen[char] = i + 1;
+    longestSubstr = Math.max(longestSubstr, i - start + 1);
   }
 
-  return longestSubstring;
+  return longestSubstr;
 }
 
 module.exports.default = findLongestSubstring;
