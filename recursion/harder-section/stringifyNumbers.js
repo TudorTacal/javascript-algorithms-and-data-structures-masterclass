@@ -1,11 +1,18 @@
 function stringifyNumbers(obj) {
+  let result = {};
   Object.keys(obj).forEach(key => {
-    if (Number.isInteger(obj[key])) obj[key] = obj[key].toString();
-    if (typeof obj[key] === "object") {
-      stringifyNumbers(obj[key]);
+    if (Number.isInteger(obj[key])) {
+     result[key] = obj[key].toString();
+    } else if (typeof obj[key] === "object" && obj[key].constructor === Object) {
+      result = {
+        ...result,
+        [key]: {...stringifyNumbers(obj[key])},
+      };
+    } else {
+      result[key] = obj[key];
     }
   });
-  return obj;
+  return result;
 };
 
 module.exports = { stringifyNumbers };

@@ -14,8 +14,6 @@ describe('stringifyNumbers', () => {
         }
     }
 
-
-
   expect(stringifyNumbers(obj)).toEqual({
       num: "1",
       test: [],
