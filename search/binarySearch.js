@@ -5,11 +5,11 @@ function binarySearch(arr, val) {
   while (left <= right) {
     mid = Math.floor((left + right) / 2);
     if (arr[mid] === val) {
-      return arr.indexOf(arr[mid]);
+      return mid;
     } else if (val > arr[mid]) {
-      left++;
+      left = mid + 1;
     } else if (val < arr[mid]) {
-      right--;
+      right = mid - 1;
     } else {
       break;
     }
