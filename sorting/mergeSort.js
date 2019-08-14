@@ -25,8 +25,15 @@ function merge(arr1, arr2) {
 
   return result;
 };
+let result = [];
 
 function mergeSort(arr) {
+  if (arr.length <= 1) return arr;
+
+  let arr1 = mergeSort(arr.slice(0, Math.floor(arr.length / 2)));
+  let arr2 = mergeSort(arr.slice(Math.floor(arr.length / 2)));
+
+  return merge(arr1, arr2);
 };
 
 module.exports = {
