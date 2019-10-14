@@ -27,15 +27,19 @@ class SinglyLinkedList {
   pop () {
     if (!this.head) return undefined;
     let current = this.head;
-    while (current) {
+    let newTail = current;
+    while (current.next) {
+      newTail = current;
       current = current.next;
-      if (current && current.next === this.tail) {
-        current.next = null;
-        this.tail = current;
-      }
     }
+    this.tail = newTail;
+    this.tail.next = null;
     this.length--;
-    return this.tail;
+    if (this.length === 0) {
+      this.head = null;
+      this.tail = null;
+    }
+    return current;
   }
 }
 

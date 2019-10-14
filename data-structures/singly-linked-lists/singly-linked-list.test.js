@@ -57,6 +57,8 @@ describe('SinglyLinkedList', () => {
     };
 
     linkedList.push('Hello');
+    linkedList.push('Beautiful');
+    linkedList.push('Happy');
     linkedList.push('World');
     let result = linkedList.pop();
 
