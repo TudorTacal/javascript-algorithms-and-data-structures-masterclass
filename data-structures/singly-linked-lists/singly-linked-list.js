@@ -41,6 +41,13 @@ class SinglyLinkedList {
     }
     return current;
   }
+
+  shift() {
+    if (!this.head) return undefined;
+    let temp = this.head;
+    this.head = this.head.next;
+    return temp;
+  }
 }
 
 module.exports = {

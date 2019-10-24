@@ -65,4 +65,21 @@ describe('SinglyLinkedList', () => {
     expect(result.val).toEqual(expectedResult.val);
     expect(result.next).toEqual(expectedResult.next);
   });
+
+  test('#shift should remove the first node and return it', () => {
+    let linkedList = new SinglyLinkedList();
+    let expectedResult = {
+      val: 'Hello',
+      next: {
+        val: 'World',
+        next: null,
+      },
+    };
+
+    linkedList.push('Hello');
+    linkedList.push('World');
+    let result = linkedList.shift();
+
+    expect(result).toEqual(expectedResult);
+  });
 });
