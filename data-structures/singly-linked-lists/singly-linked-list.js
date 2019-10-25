@@ -44,14 +44,18 @@ class SinglyLinkedList {
 
   shift() {
     if (!this.head) return undefined;
-    let temp = this.head;
+    let currentHead = this.head;
     this.head = this.head.next;
-    return temp;
+    this.length--;
+    if (this.length === 0) {
+      this.tail = null;
+    }
+    return currentHead;
   }
 }
 
-module.exports = {
-  Node,
-  SinglyLinkedList,
-};
+// module.exports = {
+//   Node,
+//   SinglyLinkedList,
+// };
 
