@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SinglyLinkedList #unshift should add a node at the beginning and return the list 1`] = `
+SinglyLinkedList {
+  "head": Node {
+    "next": Node {
+      "next": null,
+      "val": "Hello",
+    },
+    "val": "World",
+  },
+  "length": 2,
+  "tail": Node {
+    "next": null,
+    "val": "Hello",
+  },
+}
+`;

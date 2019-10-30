@@ -82,4 +82,14 @@ describe('SinglyLinkedList', () => {
 
     expect(result).toEqual(expectedResult);
   });
+
+  test('#unshift should add a node at the beginning and return the list', () => {
+    let linkedList = new SinglyLinkedList();
+
+    linkedList.push('Hello');
+    let result = linkedList.unshift('World');
+
+    expect(linkedList.length).toEqual(2);
+    expect(linkedList).toMatchSnapshot();
+  });
 });
