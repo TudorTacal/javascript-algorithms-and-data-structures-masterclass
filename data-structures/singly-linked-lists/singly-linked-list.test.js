@@ -108,4 +108,17 @@ describe('SinglyLinkedList', () => {
 
     expect(result).toEqual(expectedResult);
   });
+
+  test('#set should set the value at a given index', () => {
+    let linkedList = new SinglyLinkedList();
+
+    linkedList.push('Hello');
+    linkedList.push('Crazy');
+    linkedList.push('Beautiful');
+
+    let result = linkedList.set('World', 1);
+    let expectedResult = true;
+
+    expect(result).toEqual(expectedResult);
+  });
 });

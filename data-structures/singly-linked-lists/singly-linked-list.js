@@ -76,6 +76,16 @@ class SinglyLinkedList {
     }
     return node;
   }
+
+  set(val, index) {
+    // get the node
+    // set it's value
+    // return the node
+    let node = this.get(index);
+    if (!node) return false;
+    node.val = val;
+    return true;
+  }
 }
 
 module.exports = {
