@@ -121,4 +121,19 @@ describe('SinglyLinkedList', () => {
 
     expect(result).toEqual(expectedResult);
   });
+
+  test('#insert should insert a node at a given index', () => {
+    let linkedList = new SinglyLinkedList();
+
+    linkedList.push('Hello');
+    linkedList.push('Crazy');
+    linkedList.push('Beautiful');
+
+    let result = linkedList.insert('World', 1);
+    let expectedResult = true;
+
+    expect(linkedList.length).toEqual(4);
+    expect(result).toEqual(expectedResult);
+  });
+
 });

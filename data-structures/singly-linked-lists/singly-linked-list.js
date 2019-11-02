@@ -11,6 +11,7 @@ class SinglyLinkedList {
     this.tail = null;
     this.length = 0;
   }
+
   push(val) {
     let node = new Node(val);
     if (!this.head) {
@@ -21,6 +22,7 @@ class SinglyLinkedList {
       this.tail = node;
     }
     this.length++;
+
     return this;
   }
 
@@ -39,6 +41,7 @@ class SinglyLinkedList {
       this.head = null;
       this.tail = null;
     }
+
     return current;
   }
 
@@ -50,6 +53,7 @@ class SinglyLinkedList {
     if (this.length === 0) {
       this.tail = null;
     }
+
     return currentHead;
   }
 
@@ -65,6 +69,7 @@ class SinglyLinkedList {
       this.head = newNode;
     }
     this.length++;
+
     return this;
   }
 
@@ -74,6 +79,7 @@ class SinglyLinkedList {
     for (let i = 0; i < index; i++) {
       node = node.next;
     }
+
     return node;
   }
 
@@ -84,6 +90,22 @@ class SinglyLinkedList {
     let node = this.get(index);
     if (!node) return false;
     node.val = val;
+
+    return true;
+  }
+
+  insert(val, index) {
+    if (index < 0 || index > this.length) return false;
+    if (index === this.length) return !!this.push(val);
+    if (index === 0) return !!this.unshift(val);
+
+    let node = new Node(val);
+    let prev = this.get(index - 1);
+    let tempPrevNext = prev.next;
+    prev.next = node;
+    node.next = tempPrevNext;
+    this.length++;
+
     return true;
   }
 }
