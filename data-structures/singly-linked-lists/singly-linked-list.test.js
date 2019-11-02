@@ -92,4 +92,20 @@ describe('SinglyLinkedList', () => {
     expect(linkedList.length).toEqual(2);
     expect(linkedList).toMatchSnapshot();
   });
+
+  test('#get should return the value at a given index', () => {
+    let linkedList = new SinglyLinkedList();
+
+    linkedList.push('Hello');
+    linkedList.push('Crazy');
+    linkedList.push('Beautiful');
+
+    let result = linkedList.get(2);
+    let expectedResult = {
+      val: 'Beautiful',
+      next: null
+    };
+
+    expect(result).toEqual(expectedResult);
+  });
 });
