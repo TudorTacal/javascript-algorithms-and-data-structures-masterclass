@@ -136,4 +136,24 @@ describe('SinglyLinkedList', () => {
     expect(result).toEqual(expectedResult);
   });
 
+  test('#remove should remove a node at a given index', () => {
+    let linkedList = new SinglyLinkedList();
+
+    linkedList.push('Hello');
+    linkedList.push('Crazy');
+    linkedList.push('Beautiful');
+
+    let result = linkedList.remove(1);
+    let expectedResult = {
+      val: 'Crazy',
+      next: {
+        val: 'Beautiful',
+        next: null,
+      }
+    };
+
+    expect(linkedList.length).toEqual(2);
+    expect(result).toEqual(expectedResult);
+    expect(linkedList).toMatchSnapshot();
+  });
 });
