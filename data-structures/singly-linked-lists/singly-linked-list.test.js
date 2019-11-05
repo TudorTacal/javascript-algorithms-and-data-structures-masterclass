@@ -156,4 +156,35 @@ describe('SinglyLinkedList', () => {
     expect(result).toEqual(expectedResult);
     expect(linkedList).toMatchSnapshot();
   });
+
+  test('#reverse should reverse a list', () => {
+    let linkedList = new SinglyLinkedList();
+
+    linkedList.push('Hello');
+    linkedList.push('Crazy');
+    linkedList.push('Beautiful');
+
+    let result = linkedList.reverse();
+    let expectedResult = {
+      head: {
+        val: 'Beautiful',
+        next: {
+          val: 'Crazy',
+          next: {
+            val: 'Hello',
+            next: null
+          }
+        }
+      },
+      tail: {
+        val: 'Hello',
+        next: null,
+      },
+      length: 3,
+    };
+
+    expect(linkedList.length).toEqual(3);
+    expect(result).toEqual(expectedResult);
+    expect(result).toMatchSnapshot();
+  });
 });

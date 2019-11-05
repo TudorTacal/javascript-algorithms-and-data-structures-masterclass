@@ -17,6 +17,26 @@ SinglyLinkedList {
 }
 `;
 
+exports[`SinglyLinkedList #reverse should reverse a list 1`] = `
+SinglyLinkedList {
+  "head": Node {
+    "next": Node {
+      "next": Node {
+        "next": null,
+        "val": "Hello",
+      },
+      "val": "Crazy",
+    },
+    "val": "Beautiful",
+  },
+  "length": 3,
+  "tail": Node {
+    "next": null,
+    "val": "Hello",
+  },
+}
+`;
+
 exports[`SinglyLinkedList #unshift should add a node at the beginning and return the list 1`] = `
 SinglyLinkedList {
   "head": Node {
