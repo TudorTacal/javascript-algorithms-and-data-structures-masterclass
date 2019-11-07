@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dll #push should add a node at the end of the dll when 0 nodes 1`] = `
+DoublyLinkedList {
+  "head": Node {
+    "next": null,
+    "prev": null,
+    "val": "Hello",
+  },
+  "length": 1,
+  "tail": Node {
+    "next": null,
+    "prev": null,
+    "val": "Hello",
+  },
+}
+`;
+
+exports[`dll #push should add a node at the end of the dll when multiple nodes 1`] = `
+DoublyLinkedList {
+  "head": Node {
+    "next": Node {
+      "next": null,
+      "prev": [Circular],
+      "val": "World",
+    },
+    "prev": null,
+    "val": "Hello",
+  },
+  "length": 2,
+  "tail": Node {
+    "next": null,
+    "prev": Node {
+      "next": [Circular],
+      "prev": null,
+      "val": "Hello",
+    },
+    "val": "World",
+  },
+}
+`;

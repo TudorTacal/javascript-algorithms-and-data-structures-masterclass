@@ -10,6 +10,25 @@ class DoublyLinkedList {
   constructor() {
     this.head = null;
     this.tail = null;
-    this.lenth = 0;
+    this.length = 0;
+  }
+
+  push(val) {
+    let node = new Node(val);
+    if (!this.head) {
+      this.head = node;
+      this.tail = this.head;
+    } else {
+      this.tail.next = node;
+      node.prev = this.tail;
+      this.tail = node;
+    }
+    this.length++;
+    return this;
   }
 }
+
+module.exports = {
+  Node,
+  Dll: DoublyLinkedList,
+};
