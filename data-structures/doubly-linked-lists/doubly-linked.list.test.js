@@ -33,4 +33,27 @@ describe('dll', () => {
     expect(dll.length).toEqual(2);
     expect(dll).toMatchSnapshot();
   });
+
+  test('#pop should remove the last node when multiple nodes', () => {
+    let dll = new Dll();
+
+    dll.push('Hello');
+    dll.push('World');
+    let result = dll.pop();
+
+    expect(dll.length).toEqual(1);
+    expect(result).toMatchSnapshot();
+    expect(dll).toMatchSnapshot();
+  });
+
+  test('#pop should remove the last node when 1 node', () => {
+    let dll = new Dll();
+
+    dll.push('Hello');
+    let result = dll.pop();
+
+    expect(dll.length).toEqual(0);
+    expect(result).toMatchSnapshot();
+    expect(dll).toMatchSnapshot();
+  });
 });
