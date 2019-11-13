@@ -56,4 +56,27 @@ describe('dll', () => {
     expect(result).toMatchSnapshot();
     expect(dll).toMatchSnapshot();
   });
+
+  test('#shift should remove the first node when 1 node', () => {
+    let dll = new Dll();
+
+    dll.push('Hello');
+    let result = dll.shift();
+
+    expect(dll.length).toEqual(0);
+    expect(result).toMatchSnapshot();
+    expect(dll).toMatchSnapshot();
+  });
+
+  test('#shift should remove the first node when multiple nodes', () => {
+    let dll = new Dll();
+
+    dll.push('Hello');
+    dll.push('World');
+    let result = dll.shift();
+
+    expect(dll.length).toEqual(1);
+    expect(result).toMatchSnapshot();
+    expect(dll).toMatchSnapshot();
+  });
 });

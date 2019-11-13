@@ -83,3 +83,43 @@ DoublyLinkedList {
   },
 }
 `;
+
+exports[`dll #shift should remove the first node when 1 node 1`] = `
+Node {
+  "next": null,
+  "prev": null,
+  "val": "Hello",
+}
+`;
+
+exports[`dll #shift should remove the first node when 1 node 2`] = `
+DoublyLinkedList {
+  "head": null,
+  "length": 0,
+  "tail": null,
+}
+`;
+
+exports[`dll #shift should remove the first node when multiple nodes 1`] = `
+Node {
+  "next": null,
+  "prev": null,
+  "val": "Hello",
+}
+`;
+
+exports[`dll #shift should remove the first node when multiple nodes 2`] = `
+DoublyLinkedList {
+  "head": Node {
+    "next": null,
+    "prev": null,
+    "val": "World",
+  },
+  "length": 1,
+  "tail": Node {
+    "next": null,
+    "prev": null,
+    "val": "World",
+  },
+}
+`;
