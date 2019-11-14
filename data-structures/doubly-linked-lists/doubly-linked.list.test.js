@@ -79,4 +79,15 @@ describe('dll', () => {
     expect(result).toMatchSnapshot();
     expect(dll).toMatchSnapshot();
   });
+
+  test('#unshift should remove the first node when multiple nodes', () => {
+    let dll = new Dll();
+
+    dll.push('Hello');
+    dll.push('World');
+    dll.unshift('Salut');
+
+    expect(dll.length).toEqual(3);
+    expect(dll).toMatchSnapshot();
+  });
 });

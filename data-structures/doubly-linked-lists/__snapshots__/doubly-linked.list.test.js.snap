@@ -123,3 +123,35 @@ DoublyLinkedList {
   },
 }
 `;
+
+exports[`dll #unshift should remove the first node when multiple nodes 1`] = `
+DoublyLinkedList {
+  "head": Node {
+    "next": Node {
+      "next": Node {
+        "next": null,
+        "prev": [Circular],
+        "val": "World",
+      },
+      "prev": [Circular],
+      "val": "Hello",
+    },
+    "prev": null,
+    "val": "Salut",
+  },
+  "length": 3,
+  "tail": Node {
+    "next": null,
+    "prev": Node {
+      "next": [Circular],
+      "prev": Node {
+        "next": [Circular],
+        "prev": null,
+        "val": "Salut",
+      },
+      "val": "Hello",
+    },
+    "val": "World",
+  },
+}
+`;
