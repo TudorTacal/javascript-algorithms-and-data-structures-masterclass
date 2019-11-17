@@ -90,4 +90,16 @@ describe('dll', () => {
     expect(dll.length).toEqual(3);
     expect(dll).toMatchSnapshot();
   });
+
+  test('#get should return the node at the specified index', () => {
+    let dll = new Dll();
+
+    dll.push('Hello');
+    dll.push('Beautiful');
+    dll.push('Crazy');
+    dll.push('World');
+
+    let result = dll.get(1);
+    expect(result).toMatchSnapshot();
+  });
 });

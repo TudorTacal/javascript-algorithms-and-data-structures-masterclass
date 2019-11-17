@@ -1,5 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`dll #get should return the node at the specified index 1`] = `
+Node {
+  "next": Node {
+    "next": Node {
+      "next": null,
+      "prev": [Circular],
+      "val": "World",
+    },
+    "prev": [Circular],
+    "val": "Crazy",
+  },
+  "prev": Node {
+    "next": [Circular],
+    "prev": null,
+    "val": "Hello",
+  },
+  "val": "Beautiful",
+}
+`;
+
 exports[`dll #pop should remove the last node when 1 node 1`] = `
 Node {
   "next": null,
