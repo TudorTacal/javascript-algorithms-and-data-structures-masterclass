@@ -75,16 +75,21 @@ class DoublyLinkedList {
     let node;
     if (index < this.length / 2) {
       node = this.head;
-      for (let i = 0; i < index; i++) {
-        node = node.next;
-      }
+      for (let i = 0; i < index; i++) node = node.next;
     } else {
       node = this.tail;
-      for (let i = this.length - 1; i > index; i--) {
-        node = node.prev;
-      }
+      for (let i = this.length - 1; i > index; i--) node = node.prev;
     }
     return node;
+  }
+
+  set(index, val) {
+    let prevNode = this.get(index);
+    if (prevNode) {
+      prevNode.val = val;
+      return true;
+    }
+    return false;
   }
 }
 

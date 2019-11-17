@@ -102,4 +102,17 @@ describe('dll', () => {
     let result = dll.get(1);
     expect(result).toMatchSnapshot();
   });
+
+  test('#set should set the node at the specified index', () => {
+    let dll = new Dll();
+
+    dll.push('Hello');
+    dll.push('Beautiful');
+    dll.push('Crazy');
+    dll.push('World');
+
+    dll.set(1, 'Busy');
+
+    expect(dll).toMatchSnapshot();
+  });
 });
