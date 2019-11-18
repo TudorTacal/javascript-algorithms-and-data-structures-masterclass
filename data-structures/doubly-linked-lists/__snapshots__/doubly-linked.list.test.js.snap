@@ -184,6 +184,46 @@ DoublyLinkedList {
 }
 `;
 
+exports[`dll #reverse should reverse a dll 1`] = `
+DoublyLinkedList {
+  "head": Node {
+    "next": Node {
+      "next": Node {
+        "next": Node {
+          "next": null,
+          "prev": [Circular],
+          "val": "Hello",
+        },
+        "prev": [Circular],
+        "val": "Beautiful",
+      },
+      "prev": [Circular],
+      "val": "Crazy",
+    },
+    "prev": null,
+    "val": "World",
+  },
+  "length": 4,
+  "tail": Node {
+    "next": null,
+    "prev": Node {
+      "next": [Circular],
+      "prev": Node {
+        "next": [Circular],
+        "prev": Node {
+          "next": [Circular],
+          "prev": null,
+          "val": "World",
+        },
+        "val": "Crazy",
+      },
+      "val": "Beautiful",
+    },
+    "val": "Hello",
+  },
+}
+`;
+
 exports[`dll #set should set the node at the specified index 1`] = `
 DoublyLinkedList {
   "head": Node {

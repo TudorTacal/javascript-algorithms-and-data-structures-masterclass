@@ -144,4 +144,16 @@ describe('dll', () => {
     expect(dll).toMatchSnapshot();
   });
 
+  test('#reverse should reverse a dll', () => {
+    let dll = new Dll();
+
+    dll.push('Hello');
+    dll.push('Beautiful');
+    dll.push('Crazy');
+    dll.push('World');
+
+    dll.reverse();
+
+    expect(dll).toMatchSnapshot();
+  });
 });
