@@ -130,4 +130,18 @@ describe('dll', () => {
     expect(dll).toMatchSnapshot();
   });
 
+  test('#remove should remove a node from the specified index', () => {
+    let dll = new Dll();
+
+    dll.push('Hello');
+    dll.push('Beautiful');
+    dll.push('Crazy');
+    dll.push('World');
+
+    dll.remove(1);
+
+    expect(dll.length).toEqual(3);
+    expect(dll).toMatchSnapshot();
+  });
+
 });

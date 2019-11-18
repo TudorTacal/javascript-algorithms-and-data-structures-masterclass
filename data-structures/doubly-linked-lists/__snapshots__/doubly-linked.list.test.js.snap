@@ -152,6 +152,38 @@ DoublyLinkedList {
 }
 `;
 
+exports[`dll #remove should remove a node from the specified index 1`] = `
+DoublyLinkedList {
+  "head": Node {
+    "next": Node {
+      "next": Node {
+        "next": null,
+        "prev": [Circular],
+        "val": "World",
+      },
+      "prev": [Circular],
+      "val": "Crazy",
+    },
+    "prev": null,
+    "val": "Hello",
+  },
+  "length": 3,
+  "tail": Node {
+    "next": null,
+    "prev": Node {
+      "next": [Circular],
+      "prev": Node {
+        "next": [Circular],
+        "prev": null,
+        "val": "Hello",
+      },
+      "val": "Crazy",
+    },
+    "val": "World",
+  },
+}
+`;
+
 exports[`dll #set should set the node at the specified index 1`] = `
 DoublyLinkedList {
   "head": Node {
