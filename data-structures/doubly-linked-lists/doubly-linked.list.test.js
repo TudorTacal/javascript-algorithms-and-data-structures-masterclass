@@ -115,4 +115,19 @@ describe('dll', () => {
 
     expect(dll).toMatchSnapshot();
   });
+
+  test('#insert should insert a node at the specified index', () => {
+    let dll = new Dll();
+
+    dll.push('Hello');
+    dll.push('Beautiful');
+    dll.push('Crazy');
+    dll.push('World');
+
+    dll.insert(1, 'Busy');
+
+    expect(dll.length).toEqual(5);
+    expect(dll).toMatchSnapshot();
+  });
+
 });
