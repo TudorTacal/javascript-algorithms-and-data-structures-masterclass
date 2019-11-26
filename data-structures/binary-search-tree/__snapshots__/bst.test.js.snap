@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BinarySearchTree #insert should insert a node when 0 nodes 1`] = `
+BinarySearchTree {
+  "root": Node {
+    "left": null,
+    "right": null,
+    "value": 1,
+  },
+}
+`;
+
+exports[`BinarySearchTree #insert should insert a node when multiple nodes 1`] = `
+BinarySearchTree {
+  "root": Node {
+    "left": Node {
+      "left": Node {
+        "left": null,
+        "right": null,
+        "value": 7,
+      },
+      "right": Node {
+        "left": null,
+        "right": null,
+        "value": 9,
+      },
+      "value": 8,
+    },
+    "right": Node {
+      "left": null,
+      "right": Node {
+        "left": null,
+        "right": null,
+        "value": 17,
+      },
+      "value": 12,
+    },
+    "value": 10,
+  },
+}
+`;
