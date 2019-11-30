@@ -43,31 +43,20 @@ class BinarySearchTree {
 
   find(val) {
     if (!this.root) return null;
+    let current = this.root;
+    let found = false;
 
-    if (this.root.value === val) return this.root;
-    let node;
-    if (val > this.root.value) {
-      node = this.root.right;
-      while (true) {
-        if (!node) break;
-        if (val === node.value) {
-          break;
-        } else {
-          node = node.right;
-        }
-      }
-    } else {
-      node = this.root.left;
-      while (true) {
-        if (!node) break;
-        if (val === node.value) {
-          break;
-        } else {
-          node = node.left;
-        }
+    while(current && !found) {
+      if (val < current.value) {
+        current = current.left;
+      } else if (val > current.value) {
+        current = current.right;
+      } else {
+        found = true;
       }
     }
-    return !!node;
+
+    return !!current;
   }
 }
 

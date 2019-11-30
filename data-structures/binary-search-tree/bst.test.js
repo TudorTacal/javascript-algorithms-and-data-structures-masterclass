@@ -31,13 +31,16 @@ describe('BinarySearchTree', () => {
     bst.insert(9);
     bst.insert(12);
     bst.insert(17);
+    bst.insert(16);
 
     let result1 = bst.find(7);
     let result2 = bst.find(17);
     let result3 = bst.find(40);
+    let result4 = bst.find(16);
 
     expect(result1).toEqual(true);
     expect(result2).toEqual(true);
     expect(result3).toEqual(false);
+    expect(result4).toEqual(true);
   });
 });
