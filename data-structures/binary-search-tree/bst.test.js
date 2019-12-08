@@ -43,4 +43,20 @@ describe('BinarySearchTree', () => {
     expect(result3).toEqual(false);
     expect(result4).toEqual(true);
   });
+
+  test('#bfs should traverse then tree', () => {
+    let bst = new BST();
+
+    bst.insert(10);
+    bst.insert(8);
+    bst.insert(7);
+    bst.insert(9);
+    bst.insert(12);
+    bst.insert(17);
+    bst.insert(16);
+
+    let result = bst.bfs();
+
+    expect(result).toMatchSnapshot();
+  });
 });

@@ -1,5 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`BinarySearchTree #bfs should traverse then tree 1`] = `
+Array [
+  Node {
+    "left": Node {
+      "left": Node {
+        "left": null,
+        "right": null,
+        "value": 7,
+      },
+      "right": Node {
+        "left": null,
+        "right": null,
+        "value": 9,
+      },
+      "value": 8,
+    },
+    "right": Node {
+      "left": null,
+      "right": Node {
+        "left": Node {
+          "left": null,
+          "right": null,
+          "value": 16,
+        },
+        "right": null,
+        "value": 17,
+      },
+      "value": 12,
+    },
+    "value": 10,
+  },
+  Node {
+    "left": Node {
+      "left": null,
+      "right": null,
+      "value": 7,
+    },
+    "right": Node {
+      "left": null,
+      "right": null,
+      "value": 9,
+    },
+    "value": 8,
+  },
+  Node {
+    "left": null,
+    "right": Node {
+      "left": Node {
+        "left": null,
+        "right": null,
+        "value": 16,
+      },
+      "right": null,
+      "value": 17,
+    },
+    "value": 12,
+  },
+  Node {
+    "left": null,
+    "right": null,
+    "value": 7,
+  },
+  Node {
+    "left": null,
+    "right": null,
+    "value": 9,
+  },
+  Node {
+    "left": Node {
+      "left": null,
+      "right": null,
+      "value": 16,
+    },
+    "right": null,
+    "value": 17,
+  },
+  Node {
+    "left": null,
+    "right": null,
+    "value": 16,
+  },
+]
+`;
+
 exports[`BinarySearchTree #insert should insert a node when 0 nodes 1`] = `
 BinarySearchTree {
   "root": Node {
