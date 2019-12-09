@@ -59,4 +59,25 @@ describe('BinarySearchTree', () => {
 
     expect(result).toMatchSnapshot();
   });
+
+  test('#dfsPre should traverse then tree in preorder', () => {
+    let bst = new BST();
+
+    bst.insert(10);
+    bst.insert(8);
+    bst.insert(7);
+    bst.insert(9);
+    bst.insert(12);
+    bst.insert(17);
+    bst.insert(16);
+    //    10
+    //   8   12
+    // 7  9    17
+    //           16
+
+    let result = bst.dfsPre();
+
+    expect(result).toMatchSnapshot();
+    // 10 9 7 9 12 17 16
+  });
 });
