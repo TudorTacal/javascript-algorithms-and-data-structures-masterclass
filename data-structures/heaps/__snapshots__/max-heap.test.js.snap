@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`maxHeap #insert should insert a value in the correct place 1`] = `
+MaxHeap {
+  "values": Array [
+    55,
+    39,
+    41,
+    18,
+    27,
+    12,
+    33,
+  ],
+}
+`;
