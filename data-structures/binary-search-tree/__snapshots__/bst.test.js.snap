@@ -84,6 +84,90 @@ Array [
 ]
 `;
 
+exports[`BinarySearchTree #dfsInOrder should traverse then tree in order 1`] = `
+Array [
+  Node {
+    "left": null,
+    "right": null,
+    "value": 7,
+  },
+  Node {
+    "left": Node {
+      "left": null,
+      "right": null,
+      "value": 7,
+    },
+    "right": Node {
+      "left": null,
+      "right": null,
+      "value": 9,
+    },
+    "value": 8,
+  },
+  Node {
+    "left": null,
+    "right": null,
+    "value": 9,
+  },
+  Node {
+    "left": Node {
+      "left": Node {
+        "left": null,
+        "right": null,
+        "value": 7,
+      },
+      "right": Node {
+        "left": null,
+        "right": null,
+        "value": 9,
+      },
+      "value": 8,
+    },
+    "right": Node {
+      "left": null,
+      "right": Node {
+        "left": Node {
+          "left": null,
+          "right": null,
+          "value": 16,
+        },
+        "right": null,
+        "value": 17,
+      },
+      "value": 12,
+    },
+    "value": 10,
+  },
+  Node {
+    "left": null,
+    "right": Node {
+      "left": Node {
+        "left": null,
+        "right": null,
+        "value": 16,
+      },
+      "right": null,
+      "value": 17,
+    },
+    "value": 12,
+  },
+  Node {
+    "left": null,
+    "right": null,
+    "value": 16,
+  },
+  Node {
+    "left": Node {
+      "left": null,
+      "right": null,
+      "value": 16,
+    },
+    "right": null,
+    "value": 17,
+  },
+]
+`;
+
 exports[`BinarySearchTree #dfsPost should traverse then tree in postorder 1`] = `
 Array [
   Node {

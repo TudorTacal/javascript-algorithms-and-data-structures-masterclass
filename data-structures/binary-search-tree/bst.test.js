@@ -73,7 +73,7 @@ describe('BinarySearchTree', () => {
     //    10
     //   8   12
     // 7  9    17
-    //           16
+    //       16
 
     let result = bst.dfsPre();
 
@@ -94,11 +94,32 @@ describe('BinarySearchTree', () => {
     //    10
     //   8   12
     // 7  9    17
-    //           16
+    //       16
 
     let result = bst.dfsPost();
 
     expect(result).toMatchSnapshot();
     // 7 9 8 16 17 12 10
+  });
+
+  test('#dfsInOrder should traverse then tree in order', () => {
+    let bst = new BST();
+
+    bst.insert(10);
+    bst.insert(8);
+    bst.insert(7);
+    bst.insert(9);
+    bst.insert(12);
+    bst.insert(17);
+    bst.insert(16);
+    //    10
+    //   8   12
+    // 7  9    17
+    //       16
+
+    let result = bst.dfsInOrder();
+
+    expect(result).toMatchSnapshot();
+    // 7 8 9 10 12 16 17
   });
 });
