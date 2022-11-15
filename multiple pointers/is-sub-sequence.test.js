@@ -5,4 +5,5 @@ test('isSubSequence', () => {
   expect(isSubSequence('sing', 'sting')).toEqual(true);
   expect(isSubSequence('abc', 'abracadabra')).toEqual(true);
   expect(isSubSequence('abc', 'acb')).toEqual(false);
+  expect(isSubSequence('bb', 'ahbgdc')).toEqual(false);
 });
